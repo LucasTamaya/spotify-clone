@@ -5,11 +5,10 @@ import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import PauseCircleIcon from "@mui/icons-material/PauseCircle";
 import { useState, useEffect, useRef } from "react";
 
-const ProgressBar = ({ controler, index, songs, nextMusic }) => {
+const ProgressBar = ({ controler, index, songs, isPlaying, nextMusic }) => {
   const musicProgressBar = useRef();
   const musicProgressArea = useRef();
   const currentTimeRef = useRef();
-  const [time, setTime] = useState(0);
 
   // convertit millisecondes en mm:ss
   const convertTime = (time) => {
@@ -46,35 +45,20 @@ const ProgressBar = ({ controler, index, songs, nextMusic }) => {
 
     controler.current.currentTime =
       (clickedOffsetX / progressWidth) * songDuration;
-    controler.current.play();
+    // pause la musique
+    if (!isPlaying) {
+      controler.current.pause();
+    }
+
+    // jous la musique
+    if (isPlaying) {
+      controler.current.play();
+    }
   };
 
   return (
     <div className={styles.wrapper}>
       <h2>Playing now: {songs[index].name}</h2>
-      {/* <div
-        className={styles.progressArea}
-        ref={musicProgressArea}
-        onClick={updateTimeOnClick}
-      >
-        <div className={styles.progressBar} ref={musicProgressBar}>
-          <audio
-            id={styles.mainAudio}
-            ref={controler}
-            src={songs[index].src}
-            onTimeUpdate={updateTime}
-            onEnded={nextMusic}
-          ></audio>
-        </div>
-        <div className={styles.songTimer}>
-          <span className={styles.currentTime} ref={currentTimeRef}>
-            0:00
-          </span>
-          <span className={styles.maxDuration}>
-            {convertTime(songs[index].duration)}
-          </span>
-        </div>
-      </div> */}
       <audio
         id={styles.mainAudio}
         ref={controler}
@@ -88,12 +72,11 @@ const ProgressBar = ({ controler, index, songs, nextMusic }) => {
         min={0}
         max={100}
         ref={musicProgressBar}
-        defaultValue={0}
+        // value={0}
         onChange={updateTimeOnClick}
       />
       <div>{convertTime(songs[index].duration)}</div>
       <div className={styles.controls}></div>
-      <h1>{time}</h1>
     </div>
   );
 };

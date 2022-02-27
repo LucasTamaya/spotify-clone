@@ -1,7 +1,9 @@
+import styles from "./MusicPlayer.module.css";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import MusicController from "../MusicController";
 import songs from "../../public/songs";
 import { useState, useEffect, useRef } from "react";
-import MusicController from "../MusicController";
+import Navigation from "../Navigation/Navigation";
 
 const MusicPlayer = () => {
   const [index, setIndex] = useState(0);
@@ -22,7 +24,6 @@ const MusicPlayer = () => {
       setIndex(index + 1);
     }
   };
-
 
   useEffect(() => {
     // permet de récupérer l'index précédent afin de détecter lorsque celui-ci change
@@ -45,14 +46,23 @@ const MusicPlayer = () => {
   }, [isPlaying, index]);
 
   return (
-    <div>
-      <ProgressBar controler={controler} index={index} songs={songs} nextMusic={nextMusic}/>
-      <MusicController
-        isPlaying={isPlaying}
-        setIsPlaying={setIsPlaying}
-        prevMusic={prevMusic}
-        nextMusic={nextMusic}
-      />
+    <div className={styles.musicPlayerContainer}>
+      <div className={styles.musicPlayerTop}>
+        <ProgressBar
+          controler={controler}
+          index={index}
+          songs={songs}
+          isPlaying={isPlaying}
+          nextMusic={nextMusic}
+        />
+        <MusicController
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          prevMusic={prevMusic}
+          nextMusic={nextMusic}
+        />
+      </div>
+      <Navigation />
     </div>
   );
 };

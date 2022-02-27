@@ -1,0 +1,12 @@
+.musicPlayerContainer{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+}
+
+.musicPlayerTop{
+    background-color: blue;
+}

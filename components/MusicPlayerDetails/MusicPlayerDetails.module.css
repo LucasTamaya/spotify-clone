@@ -1,0 +1,83 @@
+.detailsBackground {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(34, 27, 27);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detailsContainer {
+  margin: 0 auto;
+}
+
+.detailsTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.musicImg {
+  margin: 30px auto;
+  width: 270px;
+  height: 270px;
+}
+
+.detailsCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.detailsCenterParagraph > p {
+  color: var(--lightgray);
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+.detailsCenterParagraph > p > span {
+  font-weight: 700;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.detailsCenterIcons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.progressContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.progressContainer > span{
+    color: var(--lightgray);
+}
+
+.progressBar {
+  /* margin-bottom: 30px; */
+  width: 20%;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.detailsBottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,5 +1,6 @@
-.musicPlayerContainer{
+.footerContainer{
     width: 100vw;
+    height: 15vh;
     display: flex;
     flex-direction: column;
     background-color: red;
@@ -9,4 +10,8 @@
 
 .musicPlayerTop{
     background-color: blue;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["storage.googleapis.com"],
+    domains: ["d34qmkt8w5wll9.cloudfront.net"],
   },
   webpack(config, options) {
     config.module.rules.push({

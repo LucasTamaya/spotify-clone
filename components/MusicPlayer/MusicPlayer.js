@@ -4,7 +4,7 @@ import MusicController from "../MusicController";
 import songs from "../../public/songs";
 import { useState, useEffect, useRef } from "react";
 import Navigation from "../Navigation/Navigation";
-
+import MusicPlayerDetails from "../MusicPlayerDetails/MusicPlayerDetails";
 const MusicPlayer = () => {
   const [index, setIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -46,24 +46,35 @@ const MusicPlayer = () => {
   }, [isPlaying, index]);
 
   return (
-    <div className={styles.musicPlayerContainer}>
-      <div className={styles.musicPlayerTop}>
-        <ProgressBar
-          controler={controler}
-          index={index}
-          songs={songs}
-          isPlaying={isPlaying}
-          nextMusic={nextMusic}
-        />
-        <MusicController
-          isPlaying={isPlaying}
-          setIsPlaying={setIsPlaying}
-          prevMusic={prevMusic}
-          nextMusic={nextMusic}
-        />
-      </div>
-      <Navigation />
-    </div>
+    <>
+      {/* <div className={styles.footerContainer}>
+        <div className={styles.musicPlayerTop}>
+          <ProgressBar
+            controler={controler}
+            index={index}
+            songs={songs}
+            isPlaying={isPlaying}
+            nextMusic={nextMusic}
+          />
+          <MusicController
+            isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
+            prevMusic={prevMusic}
+            nextMusic={nextMusic}
+          />
+        </div>
+        <Navigation />
+      </div> */}
+      <MusicPlayerDetails
+        songs={songs}
+        index={index}
+        isPlaying={isPlaying}
+        setIsPlaying={setIsPlaying}
+        controler={controler}
+        prevMusic={prevMusic}
+        nextMusic={nextMusic}
+      />
+    </>
   );
 };
 

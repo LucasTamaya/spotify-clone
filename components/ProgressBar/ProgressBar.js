@@ -57,8 +57,7 @@ const ProgressBar = ({ controler, index, songs, isPlaying, nextMusic }) => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <h2>Playing now: {songs[index].name}</h2>
+    <div className={styles.progressBarContainer}>
       <audio
         id={styles.mainAudio}
         ref={controler}
@@ -68,15 +67,15 @@ const ProgressBar = ({ controler, index, songs, isPlaying, nextMusic }) => {
       ></audio>
       <div ref={currentTimeRef}>0:00</div>
       <input
+        className={styles.progressBar}
         type="range"
         min={0}
         max={100}
         ref={musicProgressBar}
-        // value={0}
+        defaultValue={0}
         onChange={updateTimeOnClick}
       />
       <div>{convertTime(songs[index].duration)}</div>
-      <div className={styles.controls}></div>
     </div>
   );
 };

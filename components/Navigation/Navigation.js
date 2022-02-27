@@ -5,10 +5,6 @@ import FitbitIcon from "@mui/icons-material/Fitbit";
 import spotifyIcon from "../../images/spotify-icon.svg";
 import Image from "next/image";
 
-import QueueMusicIcon from "@mui/icons-material/QueueMusic";
-import RepeatIcon from "@mui/icons-material/Repeat";
-import ShuffleIcon from "@mui/icons-material/Shuffle";
-
 const Navigation = () => {
   return (
     <div className={styles.navContainer}>

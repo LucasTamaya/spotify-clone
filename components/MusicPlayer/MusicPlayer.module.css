@@ -1,17 +1,55 @@
-.footerContainer{
-    width: 100vw;
-    height: 15vh;
-    display: flex;
-    flex-direction: column;
-    background-color: red;
-    position: fixed;
-    bottom: 0;
+.footerContainer {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--darkgray);
+  position: fixed;
+  bottom: 0;
 }
 
-.musicPlayerTop{
-    background-color: blue;
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.smallMusicPlayer {
+  flex: 0.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 32px;
+  border-top: 2px solid var(--transparentgray);
+  position: relative;
+}
+
+/* width qui va augmenter en suivant la musique */
+.smallMusicPlayLine {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  top: -2px;
+  left: 0;
+}
+
+.smallMusicPlayerParagraph {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+}
+
+.smallMusicPlayerParagraph > span {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.smallMusicPlayerParagraph > p {
+  color: var(--lightgray);
+  font-size: 1.3rem;
+}
+
+.smallMusicPlayerParagraph > .bullPoint {
+  content: "\2022";
+  color: white;
+}
+
+.nav {
+  flex: 0.5;
 }

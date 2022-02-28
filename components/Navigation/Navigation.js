@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Navigation = () => {
   return (
-    <div className={styles.navContainer}>
+    <nav className={styles.navContainer}>
       <div className={styles.navIconContainer}>
         <HomeIcon sx={{ color: "var(--lightgray)", fontSize: 30 }} />
         <p>Home</p>
@@ -21,10 +21,10 @@ const Navigation = () => {
         <p>Your Library</p>
       </div>
       <div className={styles.navIconContainer}>
-        <Image src={spotifyIcon} width="24px" height="24px"/>
+        <Image src={spotifyIcon} width="24px" height="24px" />
         <p>Get App</p>
       </div>
-    </div>
+    </nav>
   );
 };
 

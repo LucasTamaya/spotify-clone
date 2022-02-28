@@ -1,0 +1,19 @@
+.progressContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.progressContainer > span {
+  color: var(--lightgray);
+}
+
+.progressBar {
+  /* margin-bottom: 30px; */
+  width: 20%;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+}

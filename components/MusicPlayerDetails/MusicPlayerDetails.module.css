@@ -7,7 +7,9 @@
   background-color: rgb(34, 27, 27);
   padding: 40px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* transform: translateY(100vh); */
 }
 
 .detailsContainer {
@@ -55,29 +57,3 @@
   row-gap: 5px;
 }
 
-.progressContainer{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.progressContainer > span{
-    color: var(--lightgray);
-}
-
-.progressBar {
-  /* margin-bottom: 30px; */
-  width: 20%;
-  background-color: white;
-  border-radius: 50%;
-  position: relative;
-}
-
-.detailsBottom{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}

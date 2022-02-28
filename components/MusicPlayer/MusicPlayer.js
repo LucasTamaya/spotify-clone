@@ -13,6 +13,7 @@ const MusicPlayer = () => {
 
   const controler = useRef();
   const smallMusicPlayLine = useRef();
+  const showMusicDetails = useRef();
 
   const prevMusic = () => {
     if (index !== 0) {
@@ -48,29 +49,12 @@ const MusicPlayer = () => {
     }
   }, [isPlaying, index]);
 
-  const convertTime = (time) => {
-    let totalMin = Math.floor(time / 60);
-    let totalSec = Math.floor(time % 60);
-    if (totalSec < 10) {
-      //if sec is less than 10 then add 0 before it
-      totalSec = `0${totalSec}`;
-    }
-    return `${totalMin}:${totalSec}`;
-  };
+  const toggleMusicDetails = () => {
+    // showMusicDetails.current.style.display = "flex";
+    showMusicDetails.current.style.transform = "translateY(0)";
+  }
 
-  const updateTime = (e) => {
-    const currentTime = e.target.currentTime; //getting playing song currentTime
-    const duration = e.target.duration; //getting playing song total duration
-    let progressWidth = (currentTime / duration) * 100;
-    if (musicProgressBar) {
-      musicProgressBar.current.value = `${progressWidth}`;
-      musicProgressBar.current.style.backgroundSize = `${progressWidth}%`;
-    }
-    smallMusicPlayLine.current.style.width = `${progressWidth}%`;
-
-    // update playing song current time
-    currentTimeRef.current.innerHTML = convertTime(currentTime);
-  };
+  
 
   return (
     <>
@@ -79,7 +63,7 @@ const MusicPlayer = () => {
           <FavoriteBorderIcon
             sx={{ fontSize: 30, color: "white", cursor: "pointer" }}
           />
-          <div className={styles.smallMusicPlayerParagraph}>
+          <div className={styles.smallMusicPlayerParagraph} onClick={toggleMusicDetails}>
             <span>{songs[index].name}</span>
             <span className={styles.bullPoint}>&bull;</span>
             <p>{songs[index].artist}</p>
@@ -112,8 +96,8 @@ const MusicPlayer = () => {
         controler={controler}
         prevMusic={prevMusic}
         nextMusic={nextMusic}
-        updateTime={updateTime}
-        convertTime={convertTime}
+        smallMusicPlayLine={smallMusicPlayLine}
+        showMusicDetails={showMusicDetails}
       />
     </>
   );

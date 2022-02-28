@@ -7,33 +7,32 @@ const MusicPlayerProgressBar = ({
   controler,
   nextMusic,
   isPlaying,
-  updateTime,
-  convertTime,
+  smallMusicPlayLine,
 }) => {
   const currentTimeRef = useRef();
   const musicProgressBar = useRef();
 
   // // convertit millisecondes en mm:ss
-  // const convertTime = (time) => {
-  //   let totalMin = Math.floor(time / 60);
-  //   let totalSec = Math.floor(time % 60);
-  //   if (totalSec < 10) {
-  //     //if sec is less than 10 then add 0 before it
-  //     totalSec = `0${totalSec}`;
-  //   }
-  //   return `${totalMin}:${totalSec}`;
-  // };
+  const convertTime = (time) => {
+    let totalMin = Math.floor(time / 60);
+    let totalSec = Math.floor(time % 60);
+    if (totalSec < 10) {
+      //if sec is less than 10 then add 0 before it
+      totalSec = `0${totalSec}`;
+    }
+    return `${totalMin}:${totalSec}`;
+  };
 
-  // const updateTime = (e) => {
-  //   const currentTime = e.target.currentTime; //getting playing song currentTime
-  //   const duration = e.target.duration; //getting playing song total duration
-  //   let progressWidth = (currentTime / duration) * 100;
-  //   musicProgressBar.current.value = `${progressWidth}`;
-  //   musicProgressBar.current.style.backgroundSize = `${progressWidth}%`;
-
-  //   // update playing song current time
-  //   currentTimeRef.current.innerHTML = convertTime(currentTime);
-  // };
+  const updateTime = (e) => {
+    const currentTime = e.target.currentTime; //getting playing song currentTime
+    const duration = e.target.duration; //getting playing song total duration
+    let progressWidth = (currentTime / duration) * 100;
+    musicProgressBar.current.value = `${progressWidth}`;
+    musicProgressBar.current.style.backgroundSize = `${progressWidth}%`;
+    smallMusicPlayLine.current.style.width = `${progressWidth}%`;
+    // update playing song current time
+    currentTimeRef.current.innerHTML = convertTime(currentTime);
+  };
 
   // update playing song currentTime on according to the progress bar width
   const updateTimeOnClick = (e) => {

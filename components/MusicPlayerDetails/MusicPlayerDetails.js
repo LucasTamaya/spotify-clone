@@ -14,14 +14,20 @@ const MusicPlayerDetails = ({
   controler,
   prevMusic,
   nextMusic,
-  updateTime,
-  convertTime,
+  smallMusicPlayLine,
+  showMusicDetails,
 }) => {
+  const toggleMusicDetails = () => {
+    showMusicDetails.current.style.transform = "translateY(100vh)";
+    // showMusicDetails.current.style.display = "none";
+  };
+
   return (
-    <div className={styles.detailsBackground}>
+    <div className={styles.detailsBackground} ref={showMusicDetails}>
       <div className={styles.detailsContainer}>
         <div className={styles.detailsTop}>
           <KeyboardArrowDownIcon
+            onClick={toggleMusicDetails}
             sx={{ fontSize: "35px", color: "white", cursor: "pointer" }}
           />
           <MoreHorizIcon
@@ -58,8 +64,7 @@ const MusicPlayerDetails = ({
           controler={controler}
           nextMusic={nextMusic}
           isPlaying={isPlaying}
-          updateTime={updateTime}
-          convertTime={convertTime}
+          smallMusicPlayLine={smallMusicPlayLine}
         />
 
         <MusicPlayerControler

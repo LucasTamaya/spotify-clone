@@ -59,3 +59,8 @@
   row-gap: 5px;
 }
 
+@media screen and (min-width: 1024px) {
+  .detailsBackground{
+    display: none;
+  }
+}

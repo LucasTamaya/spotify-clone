@@ -3,4 +3,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* background-color: violet; */
+}
+
+@media screen and (min-width: 1024px) {
+    .controlerContainer{
+        margin-bottom: 20px;
+    }
 }

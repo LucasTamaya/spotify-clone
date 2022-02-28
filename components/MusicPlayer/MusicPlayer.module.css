@@ -1,21 +1,17 @@
 .footerContainer {
   width: 100vw;
   height: 15vh;
-  display: flex;
-  flex-direction: column;
   background-color: var(--darkgray);
   position: fixed;
   bottom: 0; 
 }
 
-.smallMusicPlayer {
-  flex: 0.5;
+/* small screen */
+.smScreen{
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 32px;
-  border-top: 2px solid var(--transparentgray);
-  position: relative;
+  flex-direction: column;
 }
 
 /* width qui va augmenter en suivant la musique */
@@ -25,33 +21,90 @@
   width: 0;
   height: 2px;
   background-color: white;
-  top: -2px;
+  top: 0px;
   left: 0;
 }
 
-.smallMusicPlayerParagraph {
-  display: flex;
-  align-items: center;
-  column-gap: 7px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.smallMusicPlayerParagraph > span {
-  color: white;
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-.smallMusicPlayerParagraph > p {
-  color: var(--lightgray);
-  font-size: 1.3rem;
-}
-
-.smallMusicPlayerParagraph > .bullPoint {
-  content: "\2022";
-  color: white;
+.smallMusicPlayer{
+  flex: 0.5;
 }
 
 .nav {
   flex: 0.5;
+}
+
+.lgScreen{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(107, 72, 107, 0.555);
+}
+
+.lgScreenLeft{
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  /* background-color: blue; */
+  column-gap: 15px;
+}
+
+.lgScreenLeft > img{
+  width: 80px;
+  height: 80px;
+}
+
+.lgScreenLeftParagraph > span{
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.lgScreenLeftParagraph > p {
+  color: var(--lightgray);
+  font-size: 1.3rem;
+}
+
+.lgScreenIcons{
+  display: flex;
+  column-gap: 15px;
+}
+
+.lgScreenCenter{
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  max-width: 400px;
+}
+
+.lgScreenRight{
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 10px;
+  /* background-color: green; */
+}
+
+.lgScreenRight .inputVolume{
+  width: 150px;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .footerContainer{
+    /* background-color: rgb(133, 62, 62); */
+  }
+
+  .smScreen{
+    display: none;
+  }
+
+ 
 }

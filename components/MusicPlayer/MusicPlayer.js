@@ -149,7 +149,13 @@ const MusicPlayer = () => {
                 cursor: "pointer",
               }}
             />
-            {/* <input type="range" min="0" max="0" defaultValue={50} className={styles.inputVolume} /> */}
+            <input
+              type="range"
+              min="0"
+              max="0"
+              defaultValue={50}
+              className={styles.inputVolume}
+            />
           </div>
         </div>
         {/* Large Screen */}

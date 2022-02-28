@@ -1,7 +1,8 @@
 .footerContainer {
   width: 100vw;
   height: 15vh;
-  background-color: var(--darkgray);
+  /* background-color: var(--darkgray); */
+  background-color: var(--mediumgray);
   position: fixed;
   bottom: 0; 
 }

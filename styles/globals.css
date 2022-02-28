@@ -2,7 +2,7 @@ html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: black;
+    background-color: var(--darkgray);
     overflow-y: hidden;
 }
 
@@ -27,10 +27,12 @@ a {
   font-size: 10px;
   --black: #000;
   --darkgray: #181818;
+  --mediumgray: #2b2a2a;
   --lightgray: #b3b3b3;
   --transparentgray: #b3b3b375;
   --green: #1db954;
 }
+
 input[type="range"] {
   width: 100%;
   -webkit-appearance: none;

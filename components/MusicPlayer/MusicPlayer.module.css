@@ -3,9 +3,9 @@
   height: 15vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--darkgray);
+  background-color: var(--mediumgray);
   position: fixed;
-  bottom: 0; 
+  bottom: 0;
 }
 
 .smallMusicPlayer {
@@ -16,6 +16,7 @@
   padding: 5px 32px;
   border-top: 2px solid var(--transparentgray);
   position: relative;
+  /* background-color: green; */
 }
 
 /* width qui va augmenter en suivant la musique */
@@ -54,4 +55,69 @@
 
 .nav {
   flex: 0.5;
+}
+
+/* Large screen */
+.largeFooterLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  /* background-color: blue; */
+}
+
+.largeFooterLeft > img {
+  width: 85px;
+  height: 85px;
+}
+
+.largeFooterLeftParagraph > span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+}
+
+.largeFooterLeftParagraph > p {
+  font-size: 1.3rem;
+  color: var(--lightgray);
+}
+
+.largeFooterLeftIcons{
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  margin-left: 5px;
+}
+
+.largeFooterCenter {
+  flex: 1;
+  /* background-color: green; */
+}
+
+.largeFooterRight {
+  flex: 1;
+  /* background-color: yellow; */
+}
+
+@media screen and (min-width: 1024px) {
+  .footerContainer{
+    display: none;
+  }
+  
+  /* .footerContainer {
+    height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.479);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .smallMusicPlayer {
+    display: none;
+  } */
 }

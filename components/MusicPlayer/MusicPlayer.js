@@ -29,6 +29,11 @@ const MusicPlayer = () => {
     }
   };
 
+  const toggleMusicDetails = () => {
+    // showMusicDetails.current.style.display = "flex";
+    showMusicDetails.current.style.transform = "translateY(0)";
+  };
+
   useEffect(() => {
     // permet de récupérer l'index précédent afin de détecter lorsque celui-ci change
     const prevIndex = index;
@@ -49,21 +54,18 @@ const MusicPlayer = () => {
     }
   }, [isPlaying, index]);
 
-  const toggleMusicDetails = () => {
-    // showMusicDetails.current.style.display = "flex";
-    showMusicDetails.current.style.transform = "translateY(0)";
-  }
-
-  
-
   return (
     <>
       <div className={styles.footerContainer}>
+        {/* Small screen */}
         <div className={styles.smallMusicPlayer}>
           <FavoriteBorderIcon
             sx={{ fontSize: 30, color: "white", cursor: "pointer" }}
           />
-          <div className={styles.smallMusicPlayerParagraph} onClick={toggleMusicDetails}>
+          <div
+            className={styles.smallMusicPlayerParagraph}
+            onClick={toggleMusicDetails}
+          >
             <span>{songs[index].name}</span>
             <span className={styles.bullPoint}>&bull;</span>
             <p>{songs[index].artist}</p>
@@ -87,7 +89,9 @@ const MusicPlayer = () => {
         <div className={styles.nav}>
           <Navigation />
         </div>
+        {/* End Small screen */}
       </div>
+      {/* Hidden / Visible on small screen */}
       <MusicPlayerDetails
         songs={songs}
         index={index}
@@ -99,6 +103,7 @@ const MusicPlayer = () => {
         smallMusicPlayLine={smallMusicPlayLine}
         showMusicDetails={showMusicDetails}
       />
+      {/* End Hidden / Visible on small screen */}
     </>
   );
 };

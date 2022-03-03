@@ -1,0 +1,24 @@
+.loginContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginContainer > button {
+  margin-top: 20px;
+  background-color: var(--green);
+  border: none;
+  cursor: pointer;
+  padding: 15px 45px;
+  border-radius: 15px;
+  transition: transform 0.2s ease;
+}
+
+@media screen and (min-width: 1024px) {
+  .loginContainer > button:hover {
+    transform: scale(1.08);
+  }
+}

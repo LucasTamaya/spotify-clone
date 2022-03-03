@@ -1,0 +1,5 @@
+.centerContainer{
+    flex: 1;
+    /* background-color: blue; */
+    overflow-y: scroll;
+}

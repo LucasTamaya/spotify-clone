@@ -1,0 +1,12 @@
+.sidebarContainer {
+  display: none;
+  background-color: var(--black);
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebarContainer {
+    display: initial;
+    width: 300px;
+    /* background-color: yellow; */
+  }
+}

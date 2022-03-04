@@ -1,13 +1,9 @@
 import styles from "./Header.module.css";
-import { useSession } from "next-auth/react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-const Header = () => {
-  const { data: session } = useSession();
-
-  console.log(session);
+const Header = ({session}) => {
 
   return (
     <div className={styles.headerContainer}>

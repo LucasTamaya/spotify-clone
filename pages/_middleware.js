@@ -6,9 +6,6 @@ export default async function middleware(req) {
 
   const { pathname } = req.nextUrl;
 
-  console.log(pathname);
-  console.log(req.nextUrl);
-
   if (pathname.includes("/api/auth") || token) {
     return NextResponse.next();
   }

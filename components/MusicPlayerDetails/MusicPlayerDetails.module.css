@@ -58,6 +58,7 @@
   row-gap: 5px;
 }
 
+<<<<<<< HEAD
 /* Footer large screen */
 .footerLargeLeft {
   display: none;
@@ -149,3 +150,10 @@
     display: flex;
   }
 }
+=======
+@media screen and (min-width: 1024px) {
+  .detailsBackground{
+    display: none;
+  }
+}
+>>>>>>> 238471b418de358b6f72ee927304a6775e43f75d

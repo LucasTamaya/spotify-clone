@@ -59,6 +59,7 @@ const MusicPlayerProgressBar = ({
   };
 
   return (
+<<<<<<< HEAD
     // <div>
     /* <audio
         id={styles.mainAudio}
@@ -68,6 +69,8 @@ const MusicPlayerProgressBar = ({
         onEnded={nextMusic}
       ></audio> */
 
+=======
+>>>>>>> 238471b418de358b6f72ee927304a6775e43f75d
     <div className={styles.progressContainer}>
       <audio
         id={styles.mainAudio}

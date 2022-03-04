@@ -1,0 +1,32 @@
+.smallMusicPlayer {
+  flex: 0.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 32px;
+  border-top: 2px solid var(--transparentgray);
+  position: relative;
+}
+
+.smallMusicPlayerParagraph {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.smallMusicPlayerParagraph > span {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.smallMusicPlayerParagraph > p {
+  color: var(--lightgray);
+  font-size: 1.3rem;
+}
+
+.smallMusicPlayerParagraph > .bullPoint {
+  content: "\2022";
+  color: white;
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .controlerContainer {
   width: 100%;
   display: flex;
@@ -11,3 +12,18 @@
          width: 250px; 
     }
 }
+=======
+.controlerContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: violet; */
+}
+
+@media screen and (min-width: 1024px) {
+    .controlerContainer{
+        margin-bottom: 20px;
+    }
+}
+>>>>>>> 238471b418de358b6f72ee927304a6775e43f75d

@@ -3,7 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   margin: 30px 0;
+=======
+  margin-bottom: 30px;
+  /* background-color: yellow; */
+>>>>>>> 238471b418de358b6f72ee927304a6775e43f75d
 }
 
 .progressContainer > span {
@@ -11,7 +16,11 @@
 }
 
 .progressBar {
+<<<<<<< HEAD
   /* width: 20%; */
+=======
+  /* margin-bottom: 30px; */
+>>>>>>> 238471b418de358b6f72ee927304a6775e43f75d
   width: 0%;
   background-color: white;
   border-radius: 50%;
@@ -19,8 +28,16 @@
 }
 
 @media screen and (min-width: 1024px) {
+<<<<<<< HEAD
     .progressContainer{
       margin: 0;
       width: 480px;
     }
 }
+=======
+  .progressContainer{
+    width: 400px;
+    margin-bottom: 0;
+  }
+}
+>>>>>>> 238471b418de358b6f72ee927304a6775e43f75d
